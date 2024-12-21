@@ -201,6 +201,16 @@ class FrameProcessor(threading.Thread):
     def stop(self):
         self.running = False
 
+
+def get_public_ip():
+    try:
+        response = requests.get('https://api.ipify.org?format=text', timeout=5)
+        if response.status_code == 200:
+            return response.text
+    except requests.RequestException as e:
+        logging.error("Failed to fetch public IP", exc_info=True)
+    return "Unable to retrieve public IP"
+
 def video_feed():
     def generate():
         global latest_frame
@@ -249,9 +259,13 @@ def create_gui():
     root.grid_columnconfigure(0, weight=1)
 
     ip_address = get_local_ip()
+    public_ip = get_public_ip()
 
     ip_label = ctk.CTkLabel(root, text=f"Server IP Address: {ip_address}", font=("Arial", 16))
     ip_label.pack(pady=5)
+
+    public_ip_label = ctk.CTkLabel(root, text=f"Public IP Address: {public_ip}", font=("Arial", 16))
+    public_ip_label.pack(pady=5)
 
     video_label = ctk.CTkLabel(root, text=" ")
     video_label.pack(expand=True, fill='both')
