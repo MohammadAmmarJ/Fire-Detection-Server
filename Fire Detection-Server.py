@@ -277,7 +277,7 @@ def create_gui():
 
     # Configure the window
     root = ctk.CTk()
-    root.geometry("1600x1000")
+    root.geometry("1600x1080")
     root.title("Fire and Smoke Detection System")
     
     # Set the color theme
@@ -308,7 +308,8 @@ def create_gui():
     left_column = ctk.CTkFrame(content_frame, fg_color="transparent")
     left_column.pack(side="left", fill="both", expand=True, padx=(0, 10))
 
-    right_column = ctk.CTkFrame(content_frame, fg_color="transparent", width=300)
+    right_column = ctk.CTkScrollableFrame(content_frame, fg_color="transparent", width=300)
+
     right_column.pack(side="right", fill="both", padx=(10, 0))
 
     # Network Information Section (Right Column)
@@ -454,6 +455,8 @@ def create_gui():
                 stop_button.configure(state="disabled")
                 start_recording_button.configure(state="disabled")
                 stop_recording_button.configure(state="disabled")
+                video_label.configure(image='')
+                video_label.image = None
                 loading_label.configure(text="System Stopped", text_color="red")
             except Exception as e:
                 logging.error('Failed to stop the system', exc_info=True)
