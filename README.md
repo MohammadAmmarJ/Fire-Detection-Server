@@ -19,7 +19,6 @@ The **Fire-Detection-Server** is the core backend system for the **Fire & Smoke 
 ## 🛠️ Technologies Used
 - **Programming Language:** Python (Flask / FastAPI)
 - **Machine Learning Model:** YOLO-based fire and smoke detection (YOLO11m)
-- **Database:** PostgreSQL / MongoDB (optional for logging)
 - **Network Protocols:** UDP Broadcast for LAN discovery, HTTP for API communication
 - **Client App:** .NET MAUI for real-time mobile monitoring
 
