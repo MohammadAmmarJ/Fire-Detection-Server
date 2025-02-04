@@ -60,4 +60,3 @@ The **Fire-Detection-App** (built with .NET MAUI) enables users to:
 
 - 📧 Email: [mohammadammarga@gmail.com](mailto\:mohammadammarga@gmail.com)
 ---
-Made with ❤️ for fire safety monitoring.
