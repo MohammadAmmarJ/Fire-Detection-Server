@@ -39,7 +39,7 @@ The **Fire-Detection-Server** is the core backend system for the **Fire & Smoke 
    ```
 
 ## 🚀 Running the Server
-Start the server with:
+Start the app with:
 ```sh
 py "Fire Detection-Server.py"
 ```
