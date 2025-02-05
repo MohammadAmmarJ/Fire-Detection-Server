@@ -54,7 +54,8 @@ The **Fire-Detection-App** (built with .NET MAUI) enables users to:
 - View live annotated video feeds.
 - Receive instant notifications.
 - Switch between LAN and WAN modes.
-[Fire-Detection Client Application](https://github.com/MohammadAmmarJ/Fire-Detection-Client)
+  
+Available on : [Fire-Detection Client Application](https://github.com/MohammadAmmarJ/Fire-Detection-Client)
 
 ## 📞 Contact
 
